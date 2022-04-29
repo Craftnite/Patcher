@@ -25,7 +25,7 @@ var BLOCK_CONFIG = {
     256: {
         name: "stone",
         texturesConfig: {
-            all: "stone"
+            all: "empty"
         },
         textures: [
             [1, 0],
