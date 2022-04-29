@@ -16,7 +16,7 @@ Patcher Dashboard:
 `);
 // Game files: bro.js
 var bro = "";
-fs.readFile("assets/bro.js", 'utf8', (error, patchedBro) => {
+fs.readFile("assets/bro.js", "utf8", (error, patchedBro) => {
     bro = new String(patchedBro);
 });
 app.use(express.static("dist"));
@@ -27,7 +27,7 @@ app.get("/bro.js", (req, res) => {
 });
 // Game files: G.js
 var G = "";
-fs.readFile("assets/G.js", 'utf8', (error, patchedG) => {
+fs.readFile("assets/G.js", "utf8", (error, patchedG) => {
     G = new String(patchedG);
 });
 app.use(express.static("dist"));
@@ -37,7 +37,7 @@ app.get("/G.js", (req, res) => {
     res.type("js").send(G.toString());
 });
 // Notify us that Patcher is now running
-console.log(`Running Patcher at http://localhost:${port}`);
+console.log(`[Patcher] Running Patcher at http://localhost:${port}`);
 // Add keypress listener and send the dashboard
 app.listen(port, () => {
     readline.emitKeypressEvents(process.stdin);

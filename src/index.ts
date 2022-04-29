@@ -27,7 +27,7 @@ Patcher Dashboard:
 
 var bro : String = "";
 
-fs.readFile("assets/bro.js", 'utf8', (error : unknown, patchedBro : String) => {
+fs.readFile("assets/bro.js", "utf8", (error : unknown, patchedBro : String) => {
 bro = new String(patchedBro);
 })
 
@@ -47,7 +47,7 @@ app.get("/bro.js", (req, res) => {
 
 var G : String = "";
 
-fs.readFile("assets/G.js", 'utf8', (error : unknown, patchedG : String) => {
+fs.readFile("assets/G.js", "utf8", (error : unknown, patchedG : String) => {
 G = new String(patchedG);
 })
 
@@ -67,7 +67,7 @@ app.get("/G.js", (req, res) => {
 
 
 // Notify us that Patcher is now running
-console.log(`Running Patcher at http://localhost:${port}`);
+console.log(`[Patcher] Running Patcher at http://localhost:${port}`);
 
 
 
@@ -78,6 +78,7 @@ app.listen(port, () => {
     process.stdin.setRawMode(true);
     console.log(dashboard);
 });
+
 
 
 
