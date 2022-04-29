@@ -1,46 +1,92 @@
-// @ts-nocheck muahahaha
-import type { Server } from "http";
-import express from "express";
-import cors from "cors";
-import { getGameStatus, getPatchedGameFile } from "./util";
-import { DOWNLOAD_LINK, VERSION } from "./constants";
-import beautify from "js-beautify";
-import fs from 'fs';
-const unminifySource = false;
-(async () => {
-	const app = express();
-	app.set('trust proxy', true)
-	const gs = await getGameStatus();
-
-	if (!gs) throw new Error("The game status request failed.");
-
-	app.use(cors());
-	app.use((req, res, next) => {
-		res.set('Cache-Control', 'no-store')
-		next()
-	})
+// Import required modules
+const readline = require("readline");
+const express = require('express');
+const app = express();
+const fs = require('fs');
 
 
 
-	app.get(/\/(api\/)?bro.js/, async (req, res) => {
-		if (req.query.version && typeof req.query.version !== "string")
-			return res.status(400).send("Invalid version specified.");
-		const version = req.query.version ?? gs.gameClientVersion;
-		try {
-			res.type("js").send(`// game.min.js v${version}\n\n`+
-				(unminifySource ? beautify : (_: any) => _)
-					(await getPatchedGameFile(version))
-			);
-		} catch (e: unknown) {
-			if (!(e instanceof Error)) throw e;
-			return res.status(400).send(e.message);
-		}
-	});
 
-	app.get("/version", (req, res) => res.send(VERSION));
-	app.get("/download", (req, res) => res.redirect(DOWNLOAD_LINK));
 
-	
-	const addr: ReturnType<Server["address"]> = app.listen(process.env.PORT ?? 1337, () =>
-		console.log(`CraftnitePatcher has started on :${typeof addr === "string" ? addr : addr?.port ?? ""}!`)).address();
-})();
+// Constants
+const port : number = 1003;
+
+
+// Utilities
+const dashboard = (`
+[Patcher]
+The Craftnite.io file modifier runs along, listening on port ::${port}
+Patcher Dashboard:
+
+    [X] - Shut down Patcher
+`);
+
+
+
+// Game files: bro.js
+
+var bro : String = "";
+
+fs.readFile("assets/bro.js", 'utf8', (error : unknown, patchedBro : String) => {
+bro = new String(patchedBro);
+})
+
+
+app.use(express.static("dist"));
+// @ts-ignore
+app.get("/bro.js", (req, res) => {
+    res.send(bro.toString());
+});
+
+
+
+
+
+// Game files: G.js
+
+var G : String = "";
+
+fs.readFile("assets/G.js", 'utf8', (error : unknown, patchedG : String) => {
+G = new String(patchedG);
+})
+
+
+app.use(express.static("dist"));
+// @ts-ignore
+app.get("/G.js", (req, res) => {
+    res.send(G.toString());
+});
+
+
+
+
+
+
+
+// Notify us that Patcher is now running
+console.log(`Running Patcher at http://localhost:${port}`);
+
+
+
+
+// Add keypress listener and send the dashboard
+app.listen(port, () => {
+    readline.emitKeypressEvents(process.stdin);
+    process.stdin.setRawMode(true);
+    console.log(dashboard);
+});
+
+
+
+// On Keypress
+process.stdin.on("keypress", (str, key) => {
+    // Key name
+    const { name, ctrl } = key;
+
+    // If it's [x] or [ctrl + c], then exit Patcher.
+    if (name === "x" || (name === "c" && ctrl)) {
+        console.log("[Patcher] Exiting Patcher...");
+        process.exit();
+    }
+
+});

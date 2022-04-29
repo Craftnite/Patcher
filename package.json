@@ -1,23 +1,25 @@
 {
-  "name": "CraftnitePatcher",
+  "name": "patcher",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.ts",
+  "description": "Modifies Craftnite's game files",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.ts",
+    "setup": "npm install",
+    "start": "node dist",
+    "server": "node dist",
     "build": "npx tsc"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//afkvido/Patcher.git"
+  },
   "author": "gemsvido",
   "license": "MPL-2.0",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.18.0",
-    "fp-ts": "^2.12.1",
-    "js-beautify": "^1.14.3",
-    "lodash": "^4.17.21",
-    "node-fetch": "^3.2.4",
-    "sucrase": "^3.21.0",
     "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.30"
   }
 }
