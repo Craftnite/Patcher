@@ -25,15 +25,15 @@ var BLOCK_CONFIG = {
     256: {
         name: "stone",
         texturesConfig: {
-            all: "empty"
+            all: "stone"
         },
         textures: [
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0]
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0]
         ],
         transparency: 0,
         partialTransparency: !1,
