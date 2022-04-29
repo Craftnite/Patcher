@@ -35,7 +35,8 @@ bro = new String(patchedBro);
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/bro.js", (req, res) => {
-    res.send(bro.toString());
+    // res.send(bro.toString());
+    res.type("js").send(bro.toString());
 });
 
 
@@ -54,7 +55,9 @@ G = new String(patchedG);
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/G.js", (req, res) => {
-    res.send(G.toString());
+    // res.send(G.toString());
+    res.type("js").send(G.toString());
+
 });
 
 

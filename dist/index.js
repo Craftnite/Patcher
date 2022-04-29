@@ -22,7 +22,8 @@ fs.readFile("assets/bro.js", 'utf8', (error, patchedBro) => {
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/bro.js", (req, res) => {
-    res.send(bro.toString());
+    // res.send(bro.toString());
+    res.type("js").send(bro.toString());
 });
 // Game files: G.js
 var G = "";
@@ -32,7 +33,8 @@ fs.readFile("assets/G.js", 'utf8', (error, patchedG) => {
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/G.js", (req, res) => {
-    res.send(G.toString());
+    // res.send(G.toString());
+    res.type("js").send(G.toString());
 });
 // Notify us that Patcher is now running
 console.log(`Running Patcher at http://localhost:${port}`);
