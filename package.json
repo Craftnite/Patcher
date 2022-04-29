@@ -1,0 +1,15 @@
+{
+  "name": "CraftnitePatcher",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node index.ts"
+  },
+  "keywords": [],
+  "author": "gemsvido",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "typescript": "^4.6.4"
+  }
+}
