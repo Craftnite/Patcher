@@ -1,4 +1,4 @@
-console.log("Craftnite Patcher: bro.js", "font-size:40px;color:#540052;font-weight:900;font-family:sans-serif;");
+console.log("%cCraftnite Patcher: bro.js", "font-size:40px;color:#540052;font-weight:900;font-family:sans-serif;");
 
 const a39 = [1024, 1024],
     a40 = 16,
