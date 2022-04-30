@@ -24,14 +24,18 @@ Patcher Dashboard:
 
 
 // Game files: bro.js
+
+var bro : String = "";
+
+fs.readFile("assets/bro.js", "utf8", (error : unknown, patchedBro : String) => {
+bro = new String(patchedBro);
+})
+
+
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/bro.js", (req, res) => {
-
-    var bro : String = "";
-    fs.readFile("assets/bro.js", "utf8", (error : unknown, patchedBro : String) => {
-    bro = new String(patchedBro);
-    })
+    // res.send(bro.toString());
     res.type("js").send(bro.toString());
 });
 
@@ -40,14 +44,20 @@ app.get("/bro.js", (req, res) => {
 
 
 // Game files: G.js
+
+var G : String = "";
+
+fs.readFile("assets/G.js", "utf8", (error : unknown, patchedG : String) => {
+G = new String(patchedG);
+})
+
+
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/G.js", (req, res) => {
-    var G : String = "";
-    fs.readFile("assets/G.js", "utf8", (error : unknown, patchedG : String) => {
-    G = new String(patchedG);
-    })
+    // res.send(G.toString());
     res.type("js").send(G.toString());
+
 });
 
 
