@@ -88,7 +88,7 @@ function wwStartBtn () {
 
 	        `;
 
-	        playerName = playerName + " | Patcher";
+	        playerName = playerName + flood;
     }
 
 	const addr = getUrlParameter ("addr");
