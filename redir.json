@@ -1,0 +1,59 @@
+
+{
+  "createdBy": "Redirector v3.5.3",
+  "createdAt": "2022-04-29T21:28:30.538Z",
+  "redirects": [
+    {
+      "description": "Craftnite bro.js",
+      "exampleUrl": "https://craftnite.io/bro.js?v=8",
+      "exampleResult": "https://patcher.craftnite.repl.co/bro.js",
+      "error": null,
+      "includePattern": "https://craftnite.io/bro.js?v=8",
+      "excludePattern": "",
+      "patternDesc": "",
+      "redirectUrl": "https://patcher.craftnite.repl.co/bro.js",
+      "patternType": "W",
+      "processMatches": "noProcessing",
+      "disabled": false,
+      "grouped": false,
+      "appliesTo": [
+        "main_frame",
+        "sub_frame",
+        "stylesheet",
+        "script",
+        "image",
+        "imageset",
+        "object",
+        "xmlhttprequest",
+        "history",
+        "other"
+      ]
+    },
+    {
+      "description": "Craftnite G.js",
+      "exampleUrl": "https://craftnite.io/G.js?v=8",
+      "exampleResult": "https://patcher.craftnite.repl.co/G.js",
+      "error": null,
+      "includePattern": "https://craftnite.io/G.js?v=8",
+      "excludePattern": "",
+      "patternDesc": "",
+      "redirectUrl": "https://patcher.craftnite.repl.co/G.js",
+      "patternType": "W",
+      "processMatches": "noProcessing",
+      "disabled": false,
+      "grouped": false,
+      "appliesTo": [
+        "main_frame",
+        "sub_frame",
+        "stylesheet",
+        "script",
+        "image",
+        "imageset",
+        "object",
+        "xmlhttprequest",
+        "history",
+        "other"
+      ]
+    }
+  ]
+}
