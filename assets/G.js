@@ -59,7 +59,7 @@ G.inherit = function(t, r) {
         return !0
     }
 }(), G.isBlockSolid = function(t) {
-    return t && "air" != t && "water" != t && "flowing_water" != t && "stone" != t && "yellow_flower" != t && "red_flower" != t && "deadbush" != t && "red_mushroom" != t && "brown_mushroom" != t && "wheat" != t && "ladder" != t && "pumpkin_stem" != t && "melon_stem" != t && "vinea" != t && "vine" != t && "double_plant" != t && "sapling" != t && "lava" != t && "flowing_lava" != t && "slime" != t && "portal" != t
+    return t && "air" != t && "water" != t && "flowing_water" != t && "tallgrass" != t && "yellow_flower" != t && "red_flower" != t && "deadbush" != t && "red_mushroom" != t && "brown_mushroom" != t && "wheat" != t && "ladder" != t && "pumpkin_stem" != t && "melon_stem" != t && "vinea" != t && "vine" != t && "double_plant" != t && "sapling" != t && "lava" != t && "flowing_lava" != t && "slime" != t && "portal" != t
 }, G.rotateFromPoint = function(t, r, o, e, n) {
     (n = void 0 !== n && n) && t.parent.localToWorld(t.position), t.position.sub(r), t.position.applyAxisAngle(o, e), t.position.add(r), n && t.parent.worldToLocal(t.position), t.rotateOnAxis(o, e)
 }, G.lerp = function(t, r, o) {

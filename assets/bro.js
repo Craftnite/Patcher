@@ -8,15 +8,15 @@ var BLOCK_CONFIG = {
     0: {
         name: "air",
         texturesConfig: {
-            all: "empty"
+            all: "stone"
         },
         textures: [
-            [0, 0],
-            [0, 0],
-            [0, 0],
-            [0, 0],
-            [0, 0],
-            [0, 0]
+            [1, 0],
+            [1, 0],
+            [1, 0],
+            [1, 0],
+            [1, 0],
+            [1, 0]
         ],
         transparency: 0,
         partialTransparency: !1,
