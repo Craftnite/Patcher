@@ -14,6 +14,7 @@ Patcher Dashboard:
 
     [X] - Shut down Patcher
 `);
+// -- BEGIN GAME FILES --
 // Game files: bro.js
 var bro = "";
 fs.readFile("assets/bro.js", "utf8", (error, patchedBro) => {
@@ -22,7 +23,6 @@ fs.readFile("assets/bro.js", "utf8", (error, patchedBro) => {
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/bro.js", (req, res) => {
-    // res.send(bro.toString());
     res.type("js").send(bro.toString());
 });
 // Game files: G.js
@@ -33,9 +33,29 @@ fs.readFile("assets/G.js", "utf8", (error, patchedG) => {
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/G.js", (req, res) => {
-    // res.send(G.toString());
     res.type("js").send(G.toString());
 });
+// Game files: sup.js
+var sup = "";
+fs.readFile("assets/sup.js", "utf8", (error, patchedSup) => {
+    sup = new String(patchedSup);
+});
+app.use(express.static("dist"));
+// @ts-ignore
+app.get("/sup.js", (req, res) => {
+    res.type("js").send(sup.toString());
+});
+// Game files: yo.js
+var yo = "";
+fs.readFile("assets/yo.js", "utf8", (error, patchedYo) => {
+    yo = new String(patchedYo);
+});
+app.use(express.static("dist"));
+// @ts-ignore
+app.get("/yo.js", (req, res) => {
+    res.type("js").send(yo.toString());
+});
+// -- END GAME FILES --
 // Notify us that Patcher is now running
 console.log(`[Patcher] Running Patcher at http://localhost:${port}`);
 // Add keypress listener and send the dashboard

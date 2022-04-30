@@ -21,6 +21,8 @@ Patcher Dashboard:
     [X] - Shut down Patcher
 `);
 
+// -- BEGIN GAME FILES --
+
 
 
 // Game files: bro.js
@@ -35,7 +37,6 @@ bro = new String(patchedBro);
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/bro.js", (req, res) => {
-    // res.send(bro.toString());
     res.type("js").send(bro.toString());
 });
 
@@ -55,12 +56,49 @@ G = new String(patchedG);
 app.use(express.static("dist"));
 // @ts-ignore
 app.get("/G.js", (req, res) => {
-    // res.send(G.toString());
     res.type("js").send(G.toString());
-
 });
 
 
+
+
+
+// Game files: sup.js
+
+var sup : String = "";
+
+fs.readFile("assets/sup.js", "utf8", (error : unknown, patchedSup : String) => {
+sup = new String(patchedSup);
+})
+
+
+app.use(express.static("dist"));
+// @ts-ignore
+app.get("/sup.js", (req, res) => {
+    res.type("js").send(sup.toString());
+});
+
+
+
+
+// Game files: yo.js
+
+var yo : String = "";
+
+fs.readFile("assets/yo.js", "utf8", (error : unknown, patchedYo : String) => {
+yo = new String(patchedYo);
+})
+
+
+app.use(express.static("dist"));
+// @ts-ignore
+app.get("/yo.js", (req, res) => {
+    res.type("js").send(yo.toString());
+});
+
+
+
+// -- END GAME FILES --
 
 
 
