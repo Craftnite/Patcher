@@ -21,80 +21,46 @@ Patcher Dashboard:
     [X] - Shut down Patcher
 `);
 
+
+// File sender
+
+function sendFile (file : String) {
+
+// This is JavaScript, not TypeScript btw.
+eval(`
+
+
+var ${file} = "";
+
+fs.readFile("assets/${file}.js", "utf8", (error, patched${file}) => {
+${file} = new String(patched${file});
+})
+
+
+app.use(express.static("dist"));
+app.get("/${file}.js", (req, res) => {
+    res.type("js").send(${file}.toString());
+});
+
+
+
+`);
+}
+
+
+
+
 // -- BEGIN GAME FILES --
 
 
 
-// Game files: bro.js
-
-var bro : String = "";
-
-fs.readFile("assets/bro.js", "utf8", (error : unknown, patchedBro : String) => {
-bro = new String(patchedBro);
-})
 
 
-app.use(express.static("dist"));
-// @ts-ignore
-app.get("/bro.js", (req, res) => {
-    res.type("js").send(bro.toString());
-});
-
-
-
-
-
-// Game files: G.js
-
-var G : String = "";
-
-fs.readFile("assets/G.js", "utf8", (error : unknown, patchedG : String) => {
-G = new String(patchedG);
-})
-
-
-app.use(express.static("dist"));
-// @ts-ignore
-app.get("/G.js", (req, res) => {
-    res.type("js").send(G.toString());
-});
-
-
-
-
-
-// Game files: sup.js
-
-var sup : String = "";
-
-fs.readFile("assets/sup.js", "utf8", (error : unknown, patchedSup : String) => {
-sup = new String(patchedSup);
-})
-
-
-app.use(express.static("dist"));
-// @ts-ignore
-app.get("/sup.js", (req, res) => {
-    res.type("js").send(sup.toString());
-});
-
-
-
-
-// Game files: yo.js
-
-var yo : String = "";
-
-fs.readFile("assets/yo.js", "utf8", (error : unknown, patchedYo : String) => {
-yo = new String(patchedYo);
-})
-
-
-app.use(express.static("dist"));
-// @ts-ignore
-app.get("/yo.js", (req, res) => {
-    res.type("js").send(yo.toString());
-});
+sendFile("bro"); // bro.js
+sendFile("G"); // G.js
+sendFile("sup"); // sup.js
+sendFile("yo"); // yo.js
+sendFile("main"); // main.js
 
 
 
