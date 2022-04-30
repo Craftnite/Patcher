@@ -4529,11 +4529,10 @@ G.inherit = function(t, e) {
             this.a746 = Math.floor(this.player.a746), this.a746 != this.oldHealth && (this.a448 = !0, this.oldHealth = this.a746)
         },
         draw: function() {
-            if (!this.player.dead) {
                 this.HPSize[0] = this.size[0] * (this.a746 / 100), this.HPSize[1] = this.size[1];
                 var t = "rgba(50, 250, 50, .8)";
                 this.a746 < 70 && (t = G.a815.hpBad), this.cvs.a449(this.offset, this.pos, this.HPSize, !0, 1, t), this.HPSize2[0] = this.size[0] - this.HPSize[0], this.HPSize2[1] = this.size[1], this.HPOffset[0] = this.offset[0] + this.HPSize[0], this.HPOffset[1] = this.offset[1], this.cvs.text([120, -48], this.pos, [this.a746], ["#ffffff", "#999999"], 56, "middle", "right", G.a816, !0)
-            }
+
         }
     }, G.a814.a866 = function(t, e) {
         this.cvs = t, this.player = e, this.fontSize = 60, this.a430 = 10, this.box = {
@@ -4547,7 +4546,7 @@ G.inherit = function(t, e) {
             this.visible = !0
         },
         update: function() {
-            if (this.a448 = !0, !this.player.dead && !GAME.a510 && !GAME.inChat)
+            if (this.a448 = !0, true && !GAME.a510 && !GAME.inChat)
                 for (var t = 0; t <= this.player.totalShorta843; t++) !G.a783.a423 && G.a783.a426(48 + t) && this.player.a445Shortcut(t - 1)
         },
         open: function() {
@@ -4569,7 +4568,7 @@ G.inherit = function(t, e) {
             return -1
         },
         draw: function() {
-            if (!this.player.dead) {
+            if (true) {
                 if (this.inventoryVisible) {
                     this.cvs.a449(this.box.offset, this.box.pos, this.box.size, !0, 0, "rgba(0, 0, 0, 0.8)");
                     for (var t = 0, e = 0, i = 1; i < this.player.items.length; i++) {
@@ -5646,7 +5645,7 @@ G.inherit = function(t, e) {
                 }
             }
         },
-        /*
+
         deadStart: {
             a843: {
                 1: {
@@ -5663,7 +5662,7 @@ G.inherit = function(t, e) {
                 }
             }
         },
-        */
+
         deadEnd: {
             a843: {
                 .48: {
@@ -10820,7 +10819,8 @@ G.a650 = function(t, e, i, o, n, s, r) {
                 var h = new G.a650(this, t.i, t.e, t.o, t.pos, t.buildP, 0);
                 a = this.a643s[t.i][t.e][t.o] = h, h.updatea650sFromVertices(t.shapeVertices, t.collisionVertices, t.volume, t.solidIndices, t.solidVertices, t.solidShading, t.solidUvBases, t.solidUvProgresses, t.transparentIndices, t.transparentVertices, t.transparentUvBases, t.transparentUvProgresses, t.pointMinX, t.pointMinZ, t.pointMaxX, t.pointMaxZ)
             }
-            if (i && !this.player.dead) {
+
+            if (i) {
                 var l, c, u, d, p = this.player.position.x - (this.player.size.x - .2),
                     f = this.player.position.x + (this.player.size.x - .2),
                     g = this.player.position.y - (this.player.size.y - .9),
