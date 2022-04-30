@@ -5321,7 +5321,7 @@ G.inherit = function(t, e) {
             });
             break
         }
-        GAME.a865.player.dead ? (i = "You died", o = "255", n = "50", s = "50", GAME.deadPopup || !1 === t.a759s.deadStart.a844 ? e.deadStart = {
+        GAME.a865.player.dead ? (i = "[Patcher] You died", o = "255", n = "50", s = "50", GAME.deadPopup || !1 === t.a759s.deadStart.a844 ? e.deadStart = {
             a842: 200,
             reset: 0,
             title: i,

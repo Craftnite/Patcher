@@ -144,7 +144,7 @@ var BLOCK_CONFIG = {
     512: {
         name: "grass",
         texturesConfig: {
-            top: "empty", // grass_top
+            top: "grass_top",
             side: "grass_side",
             bottom: "dirt"
         },
