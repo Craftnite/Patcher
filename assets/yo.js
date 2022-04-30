@@ -5646,6 +5646,7 @@ G.inherit = function(t, e) {
                 }
             }
         },
+        /*
         deadStart: {
             a843: {
                 1: {
@@ -5662,6 +5663,7 @@ G.inherit = function(t, e) {
                 }
             }
         },
+        */
         deadEnd: {
             a843: {
                 .48: {
