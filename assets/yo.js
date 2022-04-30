@@ -1,3 +1,5 @@
+console.log("%cCraftnite Patcher: yo.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
+
 ! function(t) {
     var e, i, o, n, s = 1e3 / 60,
         r = 0,

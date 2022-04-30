@@ -1,3 +1,6 @@
+console.log("%cCraftnite Patcher: sup.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
+
+
 const a1 = 1,
     a2 = .44,
     a3 = .4,

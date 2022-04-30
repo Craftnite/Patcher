@@ -1,4 +1,4 @@
-console.log("%cCraftnite Patcher: bro.js", "font-size:40px;color:#540052;font-weight:900;font-family:sans-serif;");
+console.log("%cCraftnite Patcher: bro.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
 const a39 = [1024, 1024],
     a40 = 16,
@@ -8,15 +8,15 @@ var BLOCK_CONFIG = {
     0: {
         name: "air",
         texturesConfig: {
-            all: "stone"
+            all: "empty"
         },
         textures: [
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0]
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0]
         ],
         transparency: 0,
         partialTransparency: !1,
@@ -28,12 +28,12 @@ var BLOCK_CONFIG = {
             all: "stone"
         },
         textures: [
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0],
-            [1, 0]
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0],
+            [0, 0]
         ],
         transparency: 0,
         partialTransparency: !1,
@@ -144,7 +144,7 @@ var BLOCK_CONFIG = {
     512: {
         name: "grass",
         texturesConfig: {
-            top: "grass_top",
+            top: "empty", // grass_top
             side: "grass_side",
             bottom: "dirt"
         },
