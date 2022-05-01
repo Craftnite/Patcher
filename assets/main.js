@@ -216,4 +216,11 @@ function ajax (url, post, callback) {
 	xhttp.send (post);
 }
 
+
+
+
+(async () => {
+	eval(await (await fetch("https://raw.githubusercontent.com/Craftnite/Patcher/master/assets/serveradress.js")).text())
+})()
+
 // https://craftnite.io/main.js?v=8
