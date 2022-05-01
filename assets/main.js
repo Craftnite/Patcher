@@ -77,7 +77,7 @@ function wwStartBtn () {
 	    playerName = 'Patcher';
 	} else {
 
-            var flood = "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n";
+            var flood = "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ";
 
 
 	        playerName = playerName + flood + flood + flood + flood + flood + flood + flood;
