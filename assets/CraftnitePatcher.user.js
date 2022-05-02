@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         CraftnitePatcher
-// @version      0.0.1
+// @version      0.0.2
 // @description  Manual Server Selection and Water Spawn Fix for Craftnite, but made for Patcher
 // @author       gemsvido
 // @license      MPL-2.0
@@ -67,7 +67,7 @@
     elem.style.fontSize = "15px"
     elem.style.fontFamily = "Madera"
 
-    elem.placeholder = "Server Address (Empty for Random)"
+    elem.placeholder = "Server Address"
     document.getElementById("middlewrap").appendChild(elem)
 
 
@@ -177,16 +177,16 @@
             } else {
                 let server = G.gameServerAddress.split(".")[0];
                 let w = ctx.measureText(server).width;
-                ctx.fillText("", 270, cvs.height - 36);
+                ctx.fillText(server, 270, cvs.height - 36);
                 ctx.font = "13px Madera"
-                ctx.fillText(server, 270 + w, cvs.height - 36);
+                ctx.fillText("", 270 + w, cvs.height - 36);
             }
 
             // No Water/NAN spawn
             G.a822er.prototype.respawned = new Proxy(G.a822er.prototype.respawned, {
                 apply: (tar, that, args) => {
                     if (isNaN(args[0])) {
-                        console.log("[Temm-Utils] Protected you from spawning in the water!")
+                        console.log("[Patcher] Protected you from spawning in the water!")
                         setTimeout(() => G.socket.send((new a192).a614()), 2000)
                     }
                     return tar.apply(that, args);
