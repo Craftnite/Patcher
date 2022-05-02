@@ -7,7 +7,7 @@
 // @run-at       document-end
 // @match        http*://*.craftnite.io/*
 // @downloadURL  https://openuserjs.org/install/Craftnite/CraftnitePatcher.user.js
-// @updateURL    https://openuserjs.org/install/Craftnite/CraftnitePatcher.user.js
+// @updateURL    https://openuserjs.org/install/Craftnite/CraftnitePatcher.meta.js
 // @icon         https://www.google.com/s2/favicons?domain=craftnite.io
 // @grant        none
 // ==/UserScript==
