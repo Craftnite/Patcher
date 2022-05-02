@@ -1,5 +1,6 @@
 console.log("%cCraftnite Patcher: main.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
+console.log("[Patcher] Craftnite Patcher is running: main.js");
 
 
 var playerName;
@@ -56,15 +57,17 @@ function requestServerName () {
 	}
 };
 
-/*
+
 function hasAdblocker () {
 
-	if (!window["aiptag"] || JSON.stringify (window["aiptag"]).length <= 10)
+    console.log("[Patcher] Adblocker detection was blocked.");
+
+    /* if (!window["aiptag"] || JSON.stringify (window["aiptag"]).length <= 10)
 		document.getElementById ('craftnite-io_300x250').innerHTML = '<a href="https://taming.io" onclick="try{Widget.sendAdd(\'taming.io\')}catch(e){}" target="_blank"><img draggable="false" style="cursor: url(./img/interface/cursor-pointer.png) 16 0, pointer;" src="./tami.png"></img></a>';
+    */
 }
 
-hasAdblocker ();
-*/
+
 
 function wwStartBtn () {
 
@@ -77,10 +80,10 @@ function wwStartBtn () {
 	    playerName = 'Patcher';
 	} else {
 
-            var flood = "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ";
+            var flood = "NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA NIGGA ";
 
 
-	        playerName = playerName + flood + flood + flood + flood + flood + flood + flood;
+	        playerName = playerName + flood + flood;
     }
 
 	const addr = getUrlParameter ("addr");
@@ -94,6 +97,8 @@ function wwStartBtn () {
 }
 
 function wwShowVideoAd (callback) {
+
+     console.log("[Patcher] Ad was blocked.");
 
 /*
 
@@ -129,6 +134,9 @@ function wwHideVideoAd () {
 }
 
 function wwShowDedAd () {
+
+
+     console.log("[Patcher] Ad was blocked.");
 
 /*
 

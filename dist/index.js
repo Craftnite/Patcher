@@ -6,16 +6,8 @@ const app = express();
 const fs = require('fs');
 // Constants
 const port = 1003;
-// Utilities
-const dashboard = (`
-[Patcher]
-The Craftnite.io file modifier runs along, listening on port ::${port}
-Patcher Dashboard:
-
-    [X] - Shut down Patcher
-`);
 // File sender
-function sendFile(file) {
+function sendJS(file) {
     // This is JavaScript, not TypeScript btw.
     eval(`
 
@@ -37,14 +29,23 @@ app.get("/${file}.js", (req, res) => {
 `);
 }
 // -- BEGIN GAME FILES --
-sendFile("bro"); // bro.js
-sendFile("G"); // G.js
-sendFile("sup"); // sup.js
-sendFile("yo"); // yo.js
-sendFile("main"); // main.js
+sendJS("bro"); // bro.js
+sendJS("G"); // G.js
+sendJS("sup"); // sup.js
+sendJS("yo"); // yo.js
+sendJS("main"); // main.js
 // -- END GAME FILES --
 // Notify us that Patcher is now running
 console.log(`[Patcher] Running Patcher at http://localhost:${port}`);
+// --- BEGIN DASHBOARD ---
+const dashboard = (`
+[Patcher]
+The Craftnite.io file modifier runs along, listening on port ::${port}
+Patcher Dashboard:
+
+    [X] - Shut down Patcher
+    [R] - Reload files
+`);
 // Add keypress listener and send the dashboard
 app.listen(port, () => {
     readline.emitKeypressEvents(process.stdin);
@@ -60,4 +61,10 @@ process.stdin.on("keypress", (str, key) => {
         console.log("[Patcher] Exiting Patcher...");
         process.exit();
     }
+    // If it's [r], then reload the files.
+    if (name === "r") {
+        console.log("[Patcher] Reloading files...");
+        // Coming Soon
+    }
 });
+// --- END DASHBOARD ---

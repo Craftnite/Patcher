@@ -1,5 +1,8 @@
 console.log("%cCraftnite Patcher: G.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
+console.log("[Patcher] Craftnite Patcher is running: G.js");
+
+
 var GAME, G = G || {};
 G.CONFIG = {}, G.a863 = {}, G.a805 = {}, G.a867_a863 = {}, G.GameVersion = "", G.ReleaseDate = "", G.a817 = {
     a818: 0,

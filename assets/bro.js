@@ -1,5 +1,8 @@
 console.log("%cCraftnite Patcher: bro.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
+console.log("[Patcher] Craftnite Patcher is running: bro.js");
+
+
 const a39 = [1024, 1024],
     a40 = 16,
     a41 = 8,
@@ -25,7 +28,7 @@ var BLOCK_CONFIG = {
     256: {
         name: "stone",
         texturesConfig: {
-            all: "stone"
+            all: "empty"
         },
         textures: [
             [0, 0],
