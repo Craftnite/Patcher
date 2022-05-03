@@ -91,6 +91,7 @@ app.listen(port, () => {
 
 
 // On Keypress
+// @ts-expect-error
 process.stdin.on("keypress", (str, key) => {
     // Key name
     const { name, ctrl } = key;
