@@ -4,3 +4,4 @@
 
 # Node.js modules
 node_modules/
+/tsconfig.tsbuildinfo
