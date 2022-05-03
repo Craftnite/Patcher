@@ -1,6 +1,6 @@
 console.log("%cCraftnite Patcher: sup.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
-console.log("[Patcher] Craftnite Patcher is running: sup.js");
+console.log("[Patcher] *at sup.js* Craftnite Patcher is running: sup.js");
 
 
 const a1 = 1,
@@ -607,5 +607,6 @@ class a2313 {
         }
     }
 }
+
 
 // https://craftnite.io/sup.js?v=8

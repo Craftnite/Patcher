@@ -1,6 +1,7 @@
 console.log("%cCraftnite Patcher: G.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
-console.log("[Patcher] Craftnite Patcher is running: G.js");
+console.log("[Patcher] *at G.js* Craftnite Patcher is running: G.js");
+
 
 
 var GAME, G = G || {};
@@ -157,4 +158,4 @@ G.inherit = function(t, r) {
 };
 
 
-// https://craftnite.io/G.js?v=8
+// https://craftnite.io/G.js?v=10

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         CraftnitePatcher
-// @version      0.0.2
+// @version      0.0.3
 // @description  Manual Server Selection and Water Spawn Fix for Craftnite, but made for Patcher
 // @author       gemsvido
 // @license      MPL-2.0
@@ -100,10 +100,10 @@
                 let res = target.apply(that, args);
                 let { i: cx, e: cy, o: cz, v: locs, u: ids } = that;
                 if (new Set(cx).size != 1 || new Set(cy).size != 1 || new Set(cz).size != 1) {
-                    console.log("[Patcher] Multi-place crosses chunk borders... skipping.");
+                    console.log("[Patcher] *at userscript* Multi-place crosses chunk borders... skipping.");
                     return res;
                 }
-                console.log("[Patcher] " + JSON.stringify({ cx, cy, cz, locs, ids }));
+                console.log("[Patcher] *at userscript* " + JSON.stringify({ cx, cy, cz, locs, ids }));
                 // Set changed blocks in chunks
                 let chunks = new Set();
                 for (let i = 0; i < that.i.length; i++) {
@@ -149,7 +149,7 @@
                     }
                 }
 
-                console.log("[Patcher] Finished writing " + compressed.length + " chunks at " + idx + "/" + buf.byteLength, cx, cy, cz);
+                console.log("[Patcher] *at userscript* Finished writing " + compressed.length + " chunks at " + idx + "/" + buf.byteLength, cx, cy, cz);
 
                 GAME.firstChunkWorker.postMessage({
                     ao: G.a813.ao,
@@ -186,7 +186,7 @@
             G.a822er.prototype.respawned = new Proxy(G.a822er.prototype.respawned, {
                 apply: (tar, that, args) => {
                     if (isNaN(args[0])) {
-                        console.log("[Patcher] Protected you from spawning in the water!")
+                        console.log("[Patcher] *at userscript* Protected you from spawning in the water!")
                         setTimeout(() => G.socket.send((new a192).a614()), 2000)
                     }
                     return tar.apply(that, args);

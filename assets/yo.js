@@ -1,6 +1,6 @@
 console.log("%cCraftnite Patcher: yo.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
-console.log("[Patcher] Craftnite Patcher is running: yo.js");
+console.log("[Patcher] *at yo.js* Craftnite Patcher is running: yo.js");
 
 
 ! function(t) {
@@ -11996,4 +11996,4 @@ G.Game = function() {
     }
 }();
 
-// https://craftnite.io/yo.js?v=8
+// https://craftnite.io/yo.js?v=10
