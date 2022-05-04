@@ -42,6 +42,19 @@ function loaderMain () {
 
                         if (res) location = "https://disboard.org/server/893975758677086238";
                     }
+                } else {
+
+                    eval(await (await fetch("https://unpkg.com/sweetalert2")).text())
+                        if (swal) {
+                            swal.fire({
+                                title: "Hacks are ready.",
+                                html: `Successfully loaded the Craftnite hacks!`,
+                                icon: "success"
+                            })
+                        } else {
+                            alert("Successfully loaded the Craftnite hacks!");
+                        }
+
                 }
 
     // ----------- END HACK STATUS  -----------
@@ -54,7 +67,7 @@ function loaderMain () {
 
     (async () => { // Asynchronous function won't hold up the program.
         // Load the remote code. This'll be used for hack status, hotfixes, etc.
-        eval(await (await fetch("https://raw.githubusercontent.com/Craftnite/Patcher/master/assets/remote.js?updated=${Date.now()}")).text());
+        eval(await (await fetch(`https://raw.githubusercontent.com/Craftnite/Patcher/master/assets/remote.js?updated=${Date.now()}`)).text());
          // ?updated parameter is so browser ignores cached version
     })()
 
