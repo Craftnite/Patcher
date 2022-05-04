@@ -179,4 +179,7 @@ G.inherit = function(t, r) {
 };
 
 
+// ----------- END GAME FILES -----------
+
+
 // https://craftnite.io/G.js?v=10
