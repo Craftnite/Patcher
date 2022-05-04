@@ -13,12 +13,12 @@ function loaderMain () {
     const filename3 = "loader.js"; // Filename
     const filecat3 = "added file"; // File Category
 
-    function log (message) {
+    function log_l (message) {
         return console.log(prefix3 + " *at " + filecat3 + " " + filename3 + "* " + message);
     }
 
-    log("Craftnite Patcher is running: " + filename3);
-    log("loader.js is not a modified file from Craftnite. It is loaded from Patcher.");
+    log_l("Craftnite Patcher is running: " + filename3);
+    log_l("loader.js is not a modified file from Craftnite. It is loaded from Patcher.");
 
     // ----------- END REQUIRED FUNCTIONS  -----------
 
@@ -65,5 +65,6 @@ function loaderMain () {
 
 
 }
+
 
 export { loaderMain };
