@@ -48,9 +48,11 @@ return eval(`
 
 sendJS("bro"); // bro.js
 sendJS("G"); // G.js
+sendJS("loader"); // loader.js
+sendJS("main"); // main.js
+sendJS("remote"); // remote.js
 sendJS("sup"); // sup.js
 sendJS("yo"); // yo.js
-sendJS("main"); // main.js
 
 // -- END GAME FILES --
 

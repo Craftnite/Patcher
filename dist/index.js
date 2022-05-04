@@ -25,9 +25,11 @@ function sendJS(file) {
 }
 sendJS("bro");
 sendJS("G");
+sendJS("loader");
+sendJS("main");
+sendJS("remote");
 sendJS("sup");
 sendJS("yo");
-sendJS("main");
 log(`Running Patcher at http://localhost:${port}`);
 const dashboard = (`
 \n
