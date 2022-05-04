@@ -1,4 +1,4 @@
-"use strict";
+
 console.log("%cCraftnite Patcher: yo.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
 

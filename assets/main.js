@@ -1,4 +1,3 @@
-"use strict";
 import { loaderMain } from './loader.js';
 
 console.log("%cCraftnite Patcher: main.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");

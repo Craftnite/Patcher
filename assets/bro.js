@@ -1,4 +1,3 @@
-"use strict";
 console.log("%cCraftnite Patcher: bro.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
 
