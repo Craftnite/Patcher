@@ -14,7 +14,7 @@ function log (message) {
     return console.log(prefix4 + " *at " + filecat4 + " " + filename4 + "* " + message);
 }
 
-log("Craftnite Patcher is running: " + filename);
+log("Craftnite Patcher is running: " + filename4);
 
 // ----------- END APPENDED FUNCTIONS  -----------
 

@@ -17,7 +17,7 @@ function loaderMain () {
         return console.log(prefix3 + " *at " + filecat3 + " " + filename3 + "* " + message);
     }
 
-    log("Craftnite Patcher is running: " + filename);
+    log("Craftnite Patcher is running: " + filename3);
     log("loader.js is not a modified file from Craftnite. It is loaded from Patcher.");
 
     // ----------- END REQUIRED FUNCTIONS  -----------
