@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         CraftnitePatcher
+// @namespace    CraftnitePatcher
 // @version      0.0.3
 // @description  Manual Server Selection and Water Spawn Fix for Craftnite, but made for Patcher
 // @author       gemsvido
