@@ -5,12 +5,12 @@ console.log("%cCraftnite Patcher: remote.js", "font-size:20px;color:#540052;font
 
 // ----------- BEGIN REQUIRED FUNCTIONS  -----------
 
-const prefix = "[Patcher]"; // Patcher Prefix
-const filename = "remote.js"; // Filename
-const filecat = "remote file"; // File Category
+const prefix5 = "[Patcher]"; // Patcher Prefix
+const filename5 = "remote.js"; // Filename
+const filecat5 = "remote file"; // File Category
 
 function log (message) {
-    return console.log(prefix + " *at " + filecat + " " + filename + "* " + message);
+    return console.log(prefix5 + " *at " + filecat5 + " " + filename5 + "* " + message);
 }
 
 log("Craftnite Patcher is running: " + filename);

@@ -9,12 +9,12 @@ function loaderMain () {
 
     // ----------- BEGIN REQUIRED FUNCTIONS  -----------
 
-    const prefix = "[Patcher]"; // Patcher Prefix
-    const filename = "loader.js"; // Filename
-    const filecat = "added file"; // File Category
+    const prefix3 = "[Patcher]"; // Patcher Prefix
+    const filename3 = "loader.js"; // Filename
+    const filecat3 = "added file"; // File Category
 
     function log (message) {
-        return console.log(prefix + " *at " + filecat + " " + filename + "* " + message);
+        return console.log(prefix3 + " *at " + filecat3 + " " + filename3 + "* " + message);
     }
 
     log("Craftnite Patcher is running: " + filename);

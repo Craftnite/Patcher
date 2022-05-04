@@ -4,12 +4,12 @@ console.log("%cCraftnite Patcher: G.js", "font-size:20px;color:#540052;font-weig
 
 // ----------- BEGIN APPENDED FUNCTIONS  -----------
 
-const prefix = "[Patcher]"; // Patcher Prefix
-const filename = "G.js"; // Filename
-const filecat = "modified gamefile"; // File Category
+const prefix2 = "[Patcher]"; // Patcher Prefix
+const filename2 = "G.js"; // Filename
+const filecat2 = "modified gamefile"; // File Category
 
 function log (message) {
-    return console.log(prefix + " *at " + filecat + " " + filename + "* " + message);
+    return console.log(prefix2 + " *at " + filecat2 + " " + filename2 + "* " + message);
 }
 
 log("Craftnite Patcher is running: " + filename);
