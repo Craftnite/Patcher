@@ -7,12 +7,12 @@
     "setup": "npm install",
     "start": "node dist",
     "server": "node dist",
-    "build": "npx tsc && echo 'Done!'",
+    "build": "npx tsc && echo Done!",
     "single-build": "npx tsc"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com//afkvido/Patcher.git"
+    "url": "https://github.com//Craftnite/Patcher.git"
   },
   "author": "gemsvido",
   "license": "MPL-2.0",

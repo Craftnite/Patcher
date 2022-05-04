@@ -25,22 +25,20 @@ function log (message : string) : void {
 // File sender
 function sendJS (file : String) : void {
 
-// This is JavaScript, not TypeScript btw.
-eval(`
+// This code in the eval is JavaScript, not TypeScript btw.
+return eval(`
 
-var ${file} = "";
+      var ${file} = "";
 
-fs.readFile("assets/${file}.js", "utf8", (error, patched${file}) => {
-${file} = new String(patched${file});
-})
+      fs.readFile("assets/${file}.js", "utf8", (error, patched${file}) => {
+      ${file} = new String(patched${file});
+      })
 
-app.use(express.static("dist"));
-app.get("/${file}.js", (req, res) => {
-    res.type("js").send(${file}.toString());
-});
-`);
-
-return;
+      app.use(express.static("dist"));
+      app.get("/${file}.js", (req, res) => {
+          res.type("js").send(${file}.toString());
+      });
+      `);
 }
 
 

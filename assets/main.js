@@ -1,6 +1,28 @@
+"use strict";
 console.log("%cCraftnite Patcher: main.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
-console.log("[Patcher] *at main.js* Craftnite Patcher is running: main.js");
+
+
+// ----------- BEGIN APPENDED FUNCTIONS  -----------
+
+const prefix = "[Patcher]"; // Patcher Prefix
+const filename = "main.js"; // Filename
+const filecat = "modified gamefile"; // File Category
+
+function log (message) {
+    return console.log(prefix + " *at " + filecat + " " + filename + "* " + message);
+}
+
+log("Craftnite Patcher is running: " + filename);
+
+// ----------- END APPENDED FUNCTIONS  -----------
+
+
+
+
+
+
+// ----------- BEGIN GAME FILES -----------
 
 
 var playerName;

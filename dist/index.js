@@ -9,20 +9,19 @@ function log(message) {
     return console.log(logPrefix + message);
 }
 function sendJS(file) {
-    eval(`
+    return eval(`
 
-var ${file} = "";
+      var ${file} = "";
 
-fs.readFile("assets/${file}.js", "utf8", (error, patched${file}) => {
-${file} = new String(patched${file});
-})
+      fs.readFile("assets/${file}.js", "utf8", (error, patched${file}) => {
+      ${file} = new String(patched${file});
+      })
 
-app.use(express.static("dist"));
-app.get("/${file}.js", (req, res) => {
-    res.type("js").send(${file}.toString());
-});
-`);
-    return;
+      app.use(express.static("dist"));
+      app.get("/${file}.js", (req, res) => {
+          res.type("js").send(${file}.toString());
+      });
+      `);
 }
 sendJS("bro");
 sendJS("G");

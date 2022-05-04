@@ -1,6 +1,28 @@
+"use strict";
 console.log("%cCraftnite Patcher: bro.js", "font-size:20px;color:#540052;font-weight:900;font-family:sans-serif;");
 
-console.log("[Patcher] *at bro.js* Craftnite Patcher is running: bro.js");
+
+
+// ----------- BEGIN APPENDED FUNCTIONS  -----------
+
+const prefix = "[Patcher]"; // Patcher Prefix
+const filename = "bro.js"; // Filename
+const filecat = "modified gamefile"; // File Category
+
+function log (message) {
+    return console.log(prefix + " *at " + filecat + " " + filename + "* " + message);
+}
+
+log("Craftnite Patcher is running: " + filename);
+
+// ----------- END APPENDED FUNCTIONS  -----------
+
+
+
+
+
+
+// ----------- BEGIN GAME FILES -----------
 
 
 const a39 = [1024, 1024],
@@ -8577,5 +8599,7 @@ var BLOCK_CONFIG = {
     }
 };
 
+
+// ----------- END GAME FILES -----------
 
 // https://craftnite.io/bro.js?v=10
