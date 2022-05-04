@@ -18,8 +18,7 @@ const logPrefix : string = "[Patcher] ";
 
 // Automatically console.log with prefix
 function log (message : string) : void {
-    console.log(logPrefix + message);
-    return;
+    return console.log(logPrefix + message);
 }
 
 

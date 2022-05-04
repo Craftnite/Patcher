@@ -6,8 +6,7 @@ const fs = require("fs");
 const port = 1003;
 const logPrefix = "[Patcher] ";
 function log(message) {
-    console.log(logPrefix + message);
-    return;
+    return console.log(logPrefix + message);
 }
 function sendJS(file) {
     eval(`
