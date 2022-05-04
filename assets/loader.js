@@ -28,7 +28,7 @@ function loaderMain () {
 
     // ----------- BEGIN HACK STATUS  -----------
 
-    fetch("https://raw.githubusercontent.com/Craftnite/Patcher/master/status.json").then(response => response.json()).then(async data => {
+    fetch(`https://raw.githubusercontent.com/Craftnite/Patcher/master/status.json?updated=${Date.now()}`).then(response => response.json()).then(async data => {
                 if (data.offline == true) {
                     eval(await (await fetch("https://unpkg.com/sweetalert2")).text())
                     if (swal) {
