@@ -5,3 +5,4 @@
 # Node.js modules
 node_modules/
 /tsconfig.tsbuildinfo
+package-lock.json
