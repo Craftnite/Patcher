@@ -30,7 +30,7 @@ function loaderMain () {
 
     fetch(`https://raw.githubusercontent.com/Craftnite/Patcher/master/status.json?updated=${Date.now()}`).then(response => response.json()).then(async data => {
                 if (data.offline == true) {
-                    eval(await (await fetch("https://unpkg.com/sweetalert2")).text())
+                    eval(await (await fetch("https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest")).text())
                     if (swal) {
                         swal.fire({
                             title: "Oh no!",
@@ -44,7 +44,7 @@ function loaderMain () {
                     }
                 } else {
 
-                    eval(await (await fetch("https://unpkg.com/sweetalert2")).text())
+                    eval(await (await fetch("https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest")).text())
                         if (swal) {
                             swal.fire({
                                 title: "Hacks are ready.",
